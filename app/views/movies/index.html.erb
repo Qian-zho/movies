@@ -1,0 +1,27 @@
+
+
+<main class="container">
+  <h1 class="my-4">All Movies</h1>
+  <p>Choose your favorite movies and enjoy it.</p >
+
+<%= link_to "Create movie", new_movie_path, class: "btn btn-primary" %>
+
+  <div class="row">
+    <% @movies.each do |movie| %>
+      <div class="col-md-4 col-lg-3 mb-4">
+        <div class="card h-100">
+          <%= link_to movie_path(movie) do %>
+            <%= image_tag movie.photo, alt:movie.title, class: "card-img-top" %>
+          <% end %>
+          <div class="card-body">
+            <h5 class="card-title"><%= movie.title %></h5>
+            <p class="card-text"><%= movie.synopsis %></p >
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Name: <%= movie.name %> </small>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</main>

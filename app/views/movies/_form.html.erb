@@ -1,0 +1,11 @@
+
+
+<%= form_with(model: [@movie, @review], url: movie_path(@movie), local: true) do |form| %>
+  <%= form.label :content %>
+  <%= form.text_area :content, rows: 3, class: "form-control" %>
+  <%= form.submit "Submit review", class: "btn btn-primary" %>
+<% end %>
+
+<% @reviews.each do |review| %>
+  <%= render partial: 'reviews/review', locals: { review: review } %>
+<% end %>

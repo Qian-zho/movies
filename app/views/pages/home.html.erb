@@ -1,2 +1,69 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner_HP" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/93f1ec1b-55eb-4e18-815a-2a6d71bc15b7.jpg">
+  <div class="home_container">
+    <h1>MOVIES <strong></h1>
+    <p>Change your life and Watch your favourite movie.</p>
+    <a class="btn btn-flat banner-btn" href="/movies">Watch now</a>
+  </div>
+
+  <div class="car container">
+  <div class="row justify-content-center">
+  <div class="col-sm-8 my-3">
+    <%= form_with url: movies_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :brand,
+            params[:brand],
+            class: "form-control",
+            placeholder: "Movie Style"
+        %>
+        <%= text_field_tag :location,
+            params[:location],
+            class: "form-control",
+            placeholder: "Country"
+        %>
+        <%= text_field_tag :passengers,
+            params[:passengers],
+            class: "form-control",
+            placeholder: "Published date"
+        %>
+         <%= text_field_tag :price,
+            params[:price],
+            class: "form-control",
+            placeholder: "Director"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn_form btn-primary" %>
+    <% end %>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="cards_HP">
+
+  <div class="card-category_HP" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F9D4KB1x4r2D6expRfX5E3ExHKle.jpg">
+    Action
+
+  </div>
+
+
+  <div class="card-category_HP" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FcezQyM5cO454vUdLiLOkv78K64D.jpg">
+    Animation
+  </div>
+
+  <div class="card-category_HP" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FuvffsGxLjYsQ3Ya3VfuN45GVNOy.jpg)">
+    Comedy
+  </div>
+</div>
+
+<div class="cards_HP">
+  <div class="card-category_HP" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FxgmmXFbioGOXZTou2FS44yKa54r.jpg)">
+    Crime
+  </div>
+
+  <div class="card-category_HP" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F6wlC36fhTa9lN15ZEVAgrmcxKYA.jpg)">
+    Documentary
+  </div>
+
+  <div class="card-category_HP" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.plex.tv/photo?size=medium-360&scale=1&url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2Fu0ErXWgjIZkTXzADPAhhDFAejba.jpg)">
+    Drama
+  </div>
+</div>
